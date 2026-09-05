@@ -449,7 +449,7 @@ Supplier lead time, minimum order quantity, and other unavailable information ar
 
 Create a .env file in the project root:
 
-    GEMINI_API_KEY=YOUR_API_KEY_HERE
+    GEMINI_API_KEY=AIzaSyB78USyNgq7j_UfI2TXIMUdStkhT4oGz0U
 
 The API key must never be committed to Git.
 
@@ -541,45 +541,30 @@ The application handles:
 
 When the available data cannot answer a question, the Copilot communicates the limitation instead of guessing.
 
----
 
-## 23. Hackathon Validation Key
-
-The official kickoff validation key:
-
-    PASTE_VALIDATION_KEY_HERE
-
-The validation key was not included in the orientation document currently available with this project.
-
-Replace the placeholder with the official validation key if/when it is provided by the hackathon organizers.
-
-Do not place the Gemini API key here.
 
 ---
 
-## 24. Demo Video
+## 23. Demo Video
 
 5-minute demo video:
 
-    VIDEO_LINK_HERE
-
-Replace the placeholder with the final public demo video link before submission.
-
+    https://drive.google.com/file/d/1Vs5ryC68PYh-3t8u7M1pJULQKCzoAU63/view?usp=drive_link
 ---
 
-## 25. Submission
+## 24. Submission
 
 The project submission includes:
 
 - GitHub repository
 - Working application
-- 5-minute demo video
+- demo video
 
 The repository should remain publicly accessible until the results are announced.
 
 ---
 
-## 26. Recommended Demo Flow
+## 25. Recommended Demo Flow
 
 ### Step 1 — Open Dashboard
 
@@ -638,7 +623,7 @@ Show that the Copilot does not invent a supplier and instead reports insufficien
 
 ---
 
-## 27. Evaluation Focus
+## 26. Evaluation Focus
 
 This project focuses on:
 
@@ -657,13 +642,13 @@ This project focuses on:
 
 ---
 
-## 28. Project Goal
+## 27. Project Goal
 
 The goal is to provide a practical retail management assistant that converts sales and inventory data into actionable, evidence-based business insights while avoiding unsupported conclusions.
 
 ---
 
-## 29. Hackathon Notes
+## 28. Hackathon Notes
 
 The application is designed to run from the repository root using:
 
@@ -678,13 +663,4 @@ No hosted vector database or additional external AI provider is required.
 
 ---
 
-## 30. License
 
-Created as part of the NexusTiQ24 / CareerTiQ 24-hour GenAI hackathon.
-"""
-
-path = "/mnt/data/README.md"
-with open(path, "w", encoding="utf-8") as f:
-    f.write(readme)
-
-print(f"README.md created successfully: {path}")
