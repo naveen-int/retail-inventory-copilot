@@ -1,6 +1,5 @@
 # retail-inventory-copilot
 
-readme = r"""TRACK_ID=PS03
 
 # Retail Sales & Inventory Copilot
 
