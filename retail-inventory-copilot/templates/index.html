@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Retail Sales & Inventory Copilot</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>Retail Sales & Inventory Copilot</h1>
+                <p>AI-powered sales and inventory intelligence</p>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                System Online
+            </div>
+        </header>
+
+
+        <!-- KPI Cards -->
+        <section class="kpi-grid">
+
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p id="totalRevenue">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Units Sold</h3>
+                <p id="totalUnits">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Current Stock</h3>
+                <p id="totalStock">Loading...</p>
+            </div>
+
+            <div class="card danger">
+                <h3>Stock-out Risks</h3>
+                <p id="stockOutRisks">Loading...</p>
+            </div>
+
+        </section>
+
+
+        <!-- AI Copilot -->
+        <section class="copilot card">
+
+            <div class="section-title">
+                <h2>🤖 Retail AI Copilot</h2>
+                <p>Ask questions about your sales and inventory.</p>
+            </div>
+
+            <div class="question-box">
+
+                <input
+                    type="text"
+                    id="questionInput"
+                    placeholder="Example: Which products are likely to run out soon?"
+                >
+
+                <button onclick="askQuestion()">
+                    Ask Copilot
+                </button>
+
+            </div>
+
+            <div id="chatAnswer" class="answer">
+                Ask a question to get an AI-powered insight.
+            </div>
+
+        </section>
+
+
+        <!-- Inventory Alerts -->
+        <section class="two-column">
+
+            <div class="card">
+
+                <div class="section-title">
+                    <h2>🔴 Stock-out Risks</h2>
+                    <p>Products that may run out soon.</p>
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Stock</th>
+                                <th>Days Remaining</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="stockOutTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="section-title">
+                    <h2>🟡 Overstock</h2>
+                    <p>Products with excessive inventory.</p>
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Stock</th>
+                                <th>Days of Stock</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="overstockTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Product Performance -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>🏆 Top Products</h2>
+                <p>Best-performing products by revenue.</p>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Units Sold</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="topProductsTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Store Performance -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>🏪 Store Performance</h2>
+                <p>Revenue and sales by store.</p>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Store</th>
+                            <th>Location</th>
+                            <th>Units Sold</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="storeTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Non-moving Inventory -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>⚪ Non-moving Inventory</h2>
+                <p>Products currently in stock with no recorded sales.</p>
+            </div>
+
+            <div id="nonMovingList">
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>Retail Sales & Inventory Copilot • Powered by Python Analytics + Gemini</p>
+        </footer>
+
+    </div>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
